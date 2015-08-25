@@ -10,7 +10,7 @@
             return $http.get("http://www.omdbapi.com/?s=" + keyword).then(function (response) {
                 return response.data;
             });
-        }
+        };
 
         return {
             getMovies : getMovies
@@ -18,6 +18,6 @@
     };
 
     var module = angular.module("movieViewer");
-    module.factory("MovieService", MovieService);
+    module.factory("movieService", MovieService);
 
 }());
