@@ -18,5 +18,5 @@
 
     };
 
-    module.controller("homeController", ["$scope", "$http", HomeController]);
+    module.controller("homeController", HomeController);
 }());
