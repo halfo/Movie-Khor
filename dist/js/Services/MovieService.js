@@ -1,1 +1,0 @@
-!function(){var e=function(e){var t=function(t){return e.get("http://www.omdbapi.com/?s="+t).then(function(e){return e.data})};return{getMovies:t}},t=angular.module("movieViewer");t.factory("movieService",e)}();
