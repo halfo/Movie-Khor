@@ -1,1 +1,0 @@
-!function(){var o=angular.module("movieViewer",[]),e=function(o,e){};o.controller("homeController",["$scope","$http",e])}();
