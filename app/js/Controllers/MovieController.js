@@ -3,30 +3,12 @@
  */
 
 movieViewer.controller("MovieController",
-    function MovieController ($scope, movieService, $routeParams) {
-        var sendMovieDetails = function(response) {
-            $scope.movieDetails = response.data;
-        };
-
+    function MovieController ($scope, MovieService, $routeParams) {
         $scope.id = $routeParams.imdbID;
-        movieService.getMovie($scope.id).then(sendMovieDetails);
+        MovieService.getMovie($scope.id).then(sendMovieDetails);
+
+        var sendMovieDetails = function(data) {
+            $scope.movieDetails = data;
+        };
     }
 );
-
-//(function () {
-//
-//    var module = angular.module("movieViewer");
-//
-//    var MovieController = function ($scope, movieService, $routeParams) {
-//
-//        var sendMovieDetails = function(response) {
-//            $scope.movieDetails = response.data;
-//        };
-//
-//        $scope.id = $routeParams.imdbID;
-//        movieService.getMovie($scope.id).then(sendMovieDetails);
-//    }
-//
-//    module.controller("movieController", MovieController);
-//
-//}());

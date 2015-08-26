@@ -3,33 +3,20 @@
  */
 
 movieViewer.controller("HomeController",
-    function HomeController ($scope) {
+    function HomeController ($scope, MovieService) {
         var sendMoviesToUser = function (keyword) {
+            console.log("in func 1");
             $scope.keyword = keyword;
-            movieService.getMovies($scope.keyword).then(loadMoviesToScope);
+            MovieService.getMovies($scope.keyword).then(loadMoviesToScope);
         };
 
-        var loadMoviesToScope = function (response) {
-            $scope.movies = response.data;
+        var loadMoviesToScope = function (data) {
+            $scope.movies = data;
+        };
+
+        $scope.search = function (keyword) {
+            console.log(keyword);
+            sendMoviesToUser(keyword);
         };
     }
 );
-
-//(function () {
-//    var module = angular.module("movieViewer", ['ui.bootstrap']);
-//
-//    var HomeController  = function ($scope, movieService) {
-//
-//        var sendMoviesToUser = function (keyword) {
-//            $scope.keyword = keyword;
-//            movieService.getMovies($scope.keyword).then(loadMoviesToScope);
-//        };
-//
-//        var loadMoviesToScope = function (response) {
-//            $scope.movies = response.data;
-//        };
-//
-//    };
-//
-//    module.controller("homeController", HomeController);
-//}());
