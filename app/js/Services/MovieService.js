@@ -8,9 +8,9 @@ movieViewer.factory("MovieService",
             return $http.get("http://www.omdbapi.com/?s=" + keyword).then(function (response) {
                 return response.data;
             });
-        };
+        },
 
-        var getMovie = function (id) {
+        getMovie = function (id) {
             return $http.get("http://www.omdbapi.com/?i=" + id + "&tomatoes=true").then(function (response) {
                 return response.data;
             });

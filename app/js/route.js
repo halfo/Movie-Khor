@@ -5,12 +5,12 @@
 movieViewer.config (function ($routeProvider) {
     $routeProvider
         .when("/home", {
-            templateUrl:"index.html",
+            templateUrl:"home.html",
             controller:"HomeController"
         }).when("/movie/:imdbID", {
             templateUrl:"movie.html",
             controller:"MovieController"
-        }).otherwise({redirectTo:"/home"});
+        });
     }
 );
 

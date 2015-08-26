@@ -1,0 +1,12 @@
+<div class="container">
+    <form>
+        <input type="text" placeholder="Search" ng-model="keyword" ng-keyup="search(keyword)">
+    </form>
+
+    <table  class="table table-striped">
+        <tr ng-repeat="movie in movies.Search">
+            <td>{{movie.Title}}</td>
+            <td>{{movie.imdbRating}}</td>
+        </tr>
+    </table>
+</div>

@@ -8,9 +8,9 @@ movieViewer.controller("HomeController",
             console.log("in func 1");
             $scope.keyword = keyword;
             MovieService.getMovies($scope.keyword).then(loadMoviesToScope);
-        };
+        },
 
-        var loadMoviesToScope = function (data) {
+        loadMoviesToScope = function (data) {
             $scope.movies = data;
         };
 
