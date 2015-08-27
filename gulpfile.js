@@ -52,7 +52,7 @@ gulp.task('connect', function () {
   connect.server({
     //livereload: true,
     root: 'app/',
-    port: 8888
+    port: 8082
   });
 });
 
