@@ -5,9 +5,7 @@
 movieViewer.controller("HomeController",
     function HomeController ($scope, MovieService) {
         var sendMoviesToUser = function (keyword) {
-            console.log("in func 1");
-            $scope.keyword = keyword;
-            MovieService.getMovies($scope.keyword).then(loadMoviesToScope);
+            MovieService.getMovies(keyword).then(loadMoviesToScope);
         },
 
         loadMoviesToScope = function (data) {
@@ -15,7 +13,6 @@ movieViewer.controller("HomeController",
         };
 
         $scope.search = function (keyword) {
-            console.log(keyword);
             sendMoviesToUser(keyword);
         };
     }
