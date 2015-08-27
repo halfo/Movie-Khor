@@ -18,13 +18,13 @@
             <ul class="half-block">
                 <li>
                     <span class="imdb" title="rotten!"></span>
-                    <h2>{{movieDetails.imdbRating}}</h2>
+                    <h2 ng-if="movieDetails.imdbRating !== 'N/A'">{{movieDetails.imdbRating}}</h2>
                     <!--<rating ng-model="movieDetails.imdbRating" max="10" readonly="true"></rating>-->
                 </li>
 
                 <li>
                     <span class="rottentomatoes positive" title="rotten!"></span>
-                    <h2>{{movieDetails.tomatoMeter}}%</h2>
+                    <h2 ng-if="movieDetails.tomatoMeter !== 'N/A'">{{movieDetails.tomatoMeter}}%</h2>
                     <!--<rating ng-model="movieDetails.tomatoRating" max="10" readonly="true"></rating>-->
                 </li>
             </ul>

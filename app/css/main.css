@@ -50,9 +50,12 @@ input[type="text"] {
 }
 
 .movie-page h1 button {
-    margin-bottom: 11px;
-    margin-left: 204px;
+    float: right;
+    margin-top: 13px;
+    margin-left: 0px;
 }
+
+hr { width: 100%; }
 
 ul {
     margin-top: 20px;
