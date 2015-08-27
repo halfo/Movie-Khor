@@ -7,9 +7,9 @@ movieViewer.config (function ($routeProvider) {
         .when("/home", {
             templateUrl: "partials/home.html",
             controller: "HomeController"
-        }).when("/movie/:imdbID", {
+        }).when("/movie/:Title", {
             templateUrl: "partials/movie.html",
             controller: "MovieController"
-        });
+        }).otherwise({redirectTo:"/home"});
     }
 );
