@@ -2,22 +2,23 @@
  * Created by sadman on 8/25/15.
  */
 
-(function () {
-
-    var MovieService = function ($http) {
-
+movieViewer.factory("MovieService",
+    function MovieService ($http) {
         var getMovies = function (keyword) {
             return $http.get("http://www.omdbapi.com/?s=" + keyword).then(function (response) {
+                return response.data;
+            });
+        },
+
+        getMovie = function (id) {
+            return $http.get("http://www.omdbapi.com/?i=" + id + "&tomatoes=true").then(function (response) {
                 return response.data;
             });
         };
 
         return {
-            getMovies : getMovies
+            getMovies : getMovies,
+            getMovie : getMovie
         };
-    };
-
-    var module = angular.module("movieViewer");
-    module.factory("movieService", MovieService);
-
-}());
+    }
+);

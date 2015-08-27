@@ -2,21 +2,26 @@
  * Created by sadman on 8/25/15.
  */
 
-(function () {
-    var module = angular.module("movieViewer", []);
-
-    var HomeController  = function ($scope, movieService) {
-
+movieViewer.controller("HomeController",
+    function HomeController ($scope, MovieService, $location) {
         var sendMoviesToUser = function (keyword) {
+            console.log("in func 1");
             $scope.keyword = keyword;
-            movieService.getMovies($scope.keyword).then(loadMoviesToScope);
+            MovieService.getMovies($scope.keyword).then(loadMoviesToScope);
+        },
+
+        loadMoviesToScope = function (data) {
+            $scope.movies = data;
         };
 
-        var loadMoviesToScope = function (response) {
-            $scope.movies = response.data;
+        $scope.search = function (keyword) {
+            console.log(keyword);
+            sendMoviesToUser(keyword);
         };
 
-    };
-
-    module.controller("homeController", ["$scope", "$http", HomeController]);
-}());
+        $scope.go = function(path) {
+            //console.log(path);
+            $location.path(path);
+        };
+    }
+);
