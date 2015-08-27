@@ -3,9 +3,9 @@
  */
 
 movieViewer.controller("HomeController",
-    function HomeController ($scope, MovieService) {
+    function HomeController ($scope, MovieService, $location) {
         var sendMoviesToUser = function (keyword) {
-            MovieService.getMovies(keyword).then(loadMoviesToScope);
+            MovieService.getMovies($scope.keyword).then(loadMoviesToScope);
         },
 
         loadMoviesToScope = function (data) {
@@ -14,6 +14,10 @@ movieViewer.controller("HomeController",
 
         $scope.search = function (keyword) {
             sendMoviesToUser(keyword);
+        };
+
+        $scope.go = function(path) {
+            $location.path(path);
         };
     }
 );

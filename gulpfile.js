@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
+var watch = require('gulp-watch');
 
 // tasks
 gulp.task('lint', function() {
@@ -49,12 +50,19 @@ gulp.task('copy-html-files', function () {
 
 gulp.task('connect', function () {
   connect.server({
+    //livereload: true,
     root: 'app/',
     port: 8082
   });
 });
+
+gulp.task('watch', function () {
+    gulp.watch('app/*');
+});
+
 gulp.task('connectDist', function () {
   connect.server({
+    //livereload: true,
     root: 'dist/',
     port: 8080
   });

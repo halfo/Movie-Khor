@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+html, body, .wrapper { height: 100%; }
+h1, h2, h3, h4, h5, h6, ul, li, input {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+
+    overflow-y: hidden;
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.home-page h1 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+input[type="text"] {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.movie-page {
+    margin-top: 40px;
+}
+
+.movie-page img {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.movie-page h1 {
+    margin-top: 43px;
+    margin-bottom: 10px;
+    text-shadow: -4px 0 #f9f9f9;
+}
+
+.movie-page h1 button {
+    margin-bottom: 11px;
+    margin-left: 204px;
+}
+
+ul {
+    margin-top: 20px;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.movie-content { height: 100%; }
+
+.half-block {
+    margin-top: 0;
+    width: 70%;
+    display: table;
+}
+
+.half-block li {
+    padding: 0;
+    display: table-cell;
+}
+
+.half-block h2 {
+    display: inline-block;
+    font-size: 45px;
+    padding: 0px 20px;
+}
+
+.rottentomatoes {
+    height: 62px;
+    width: 60px;
+    /*background-position: -192px -48px;*/
+    background: transparent url('//d3biamo577v4eu.cloudfront.net/static/images/redesign/icons-v2.png') no-repeat 0px 0px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.imdb {
+    width: 91px;
+    height: 58px;
+    display: inline-block;
+    background-image: url(//www.userlogos.org/files/imagecache/thumbnail/logos/2690_fernandosantucci/imdb.new_.logo_.png);
+    background-repeat: no-repeat;
+    margin-bottom: -3px;
+}
+

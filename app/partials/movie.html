@@ -1,0 +1,45 @@
+<div class="container movie-page">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="{{movieDetails.Poster}}">
+        </div>
+
+        <div class="movie-content col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <h1>
+                {{movieDetails.Title}}
+                <a href="{{movieDetails.Website}}" ng-if="movieDetails.Website !== 'N/A'">
+                    <button type="button" class="btn btn-primary">
+                        <h2>Website</h2>
+                    </button>
+                </a>
+            </h1>
+            <hr>
+
+            <ul class="half-block">
+                <li>
+                    <span class="imdb" title="rotten!"></span>
+                    <h2>{{movieDetails.imdbRating}}</h2>
+                    <!--<rating ng-model="movieDetails.imdbRating" max="10" readonly="true"></rating>-->
+                </li>
+
+                <li>
+                    <span class="rottentomatoes positive" title="rotten!"></span>
+                    <h2>{{movieDetails.tomatoMeter}}%</h2>
+                    <!--<rating ng-model="movieDetails.tomatoRating" max="10" readonly="true"></rating>-->
+                </li>
+            </ul>
+
+            <ul>
+
+                <li>Year: {{movieDetails.Year}}</li>
+                <li>Genre: {{movieDetails.Genre}}</li>
+                <li>Director: {{movieDetails.Director}}</li>
+                <li>Rated: {{movieDetails.Rated}}</li>
+                <li>Released: {{movieDetails.Released}}</li>
+                <li>Runtime: {{movieDetails.Runtime}}</li>
+                <li>Consensus: {{movieDetails.tomatoConsensus}}</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
