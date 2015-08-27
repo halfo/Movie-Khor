@@ -8,7 +8,6 @@ movieViewer.controller("MovieController",
             $scope.movieDetails = data;
         };
 
-        $scope.id = $routeParams.imdbID;
-        MovieService.getMovie($scope.id).then(sendMovieDetails);
+        MovieService.getMovie($routeParams.Title).then(sendMovieDetails);
     }
 );
