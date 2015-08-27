@@ -43,16 +43,9 @@ input[type="text"] {
     background-color: #f5f5f5;
 }
 
-.movie-page h1 {
-    margin-top: 43px;
-    margin-bottom: 10px;
-    text-shadow: -4px 0 #f9f9f9;
-}
-
-.movie-page h1 button {
+.float-right {
     float: right;
-    margin-top: 13px;
-    margin-left: 0px;
+    margin-top: 53px;
 }
 
 hr { width: 100%; }
