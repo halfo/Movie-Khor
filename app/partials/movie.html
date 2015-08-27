@@ -5,14 +5,15 @@
         </div>
 
         <div class="movie-content col-lg-8 col-md-8 col-sm-8 col-xs-8">
-            <h1>
-                {{movieDetails.Title}}
-                <a href="{{movieDetails.Website}}" ng-if="movieDetails.Website !== 'N/A'">
-                    <button type="button" class="btn btn-primary">
+            <div class="row">
+                <h1 class="col-md-10">{{movieDetails.Title}}</h1>
+                <a  class="col-md-2" href="{{movieDetails.Website}}" ng-if="movieDetails.Website !== 'N/A'">
+                    <button type="button" class="btn btn-primary float-right">
                         <h2>Website</h2>
                     </button>
                 </a>
-            </h1>
+            </div>
+
             <hr>
 
             <ul class="half-block">
