@@ -1,0 +1,20 @@
+<div class="container home-page">
+    <h1>Movie Khor</h1>
+    <form>
+        <input type="text" class="form-control" placeholder="Search" ng-model="keyword" ng-keyup="search(keyword)">
+    </form>
+
+    <table  class="table table-striped table-hover table-bordered results">
+        <thead>
+            <th>Movie Name</th>
+            <th>Release Date</th>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="movie in movies.Search" ng-click="go('/movie/' + movie.imdbID)">
+            <td>{{movie.Title}}</td>
+            <td>{{movie.Year}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
