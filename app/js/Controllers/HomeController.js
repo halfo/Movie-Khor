@@ -4,9 +4,7 @@
 
 movieViewer.controller("HomeController",
     function HomeController ($scope, MovieService, $location, $timeout) {
-        var i = 1;
         var sendMoviesToUser = function () {
-                console.log(i); i+=1;
             MovieService.getMovies($scope.keyword).then(loadMoviesToScope);
         },
 
